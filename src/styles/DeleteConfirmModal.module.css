@@ -1,0 +1,53 @@
+/* DeleteConfirmModal.module.css */
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 25px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+}
+
+.icon {
+  font-size: 30px;
+  color: #dc3545;
+  margin-bottom: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.confirmBtn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancelBtn {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
