@@ -1,6 +1,10 @@
 const BASE_URL = import.meta.env.VITE_API_BASE;
 
-//fetch the book details
+if (!BASE_URL) {
+  throw new Error("VITE_API_BASE is not defined in environment variables");
+}
+
+// //fetch the book details
 export const fetchBooks = async () => {
   const res = await fetch(BASE_URL);
   if (!res.ok) throw new Error("Failed to fetch books");
@@ -20,16 +24,16 @@ export const addBook = async (book) => {
 
 //update existing book details
 export const updateBook = async (id, book) => {
-  const { _id, ...bookWithoutId } = book;
+  const { _id, ...rest } = book;
   const res = await fetch(`${BASE_URL}/${id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(bookWithoutId),
+    body: JSON.stringify(rest),
   });
   if (!res.ok) throw new Error("Failed to update book");
 };
 
-//delete book
+// //delete book
 export const deleteBook = async (id) => {
   const res = await fetch(`${BASE_URL}/${id}`, {
     method: "DELETE",
