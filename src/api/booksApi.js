@@ -1,5 +1,4 @@
-const BASE_URL =
-  "https://crudcrud.com/api/4ee6c1d238a246c482f144f9ea9721eb/books";
+const BASE_URL = import.meta.env.VITE_API_BASE;
 
 //fetch the book details
 export const fetchBooks = async () => {
