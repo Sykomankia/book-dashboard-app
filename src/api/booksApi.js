@@ -1,6 +1,4 @@
-// const BASE_URL = process.env.REACT_APP_API_BASE;
-const BASE_URL =
-  "https://crudcrud.com/api/4ee6c1d238a246c482f144f9ea9721eb/books";
+const BASE_URL = process.env.REACT_APP_API_BASE;
 
 if (!BASE_URL) {
   throw new Error("REACT_APP_API_BASE is not defined");
